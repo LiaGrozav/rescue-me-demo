@@ -37,7 +37,7 @@ exports.favPets = async (req, res, next) => {
         select: "-__v",
       });
 
-    res.send(user);
+    res.send({user});
   } catch (err) {
     next(err);
   }
@@ -70,7 +70,7 @@ exports.removeFavoritePet = async (req, res, next) => {
         select: "-__v",
       });
 
-    res.send(user);
+    res.send({user});
   } catch (err) {
     next(err);
   }
