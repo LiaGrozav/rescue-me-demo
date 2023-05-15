@@ -1,0 +1,60 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .give-for-adoption-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+    justify-items: center;
+    align-items: start;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 20px;
+
+    input[type="text"],
+    input[type="number"],
+    input[type="checkbox"] {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      label {
+        font-weight: bold;
+        text-align: left;
+      }
+      input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      // .custom-select {
+      //   .css-1pahdxg-control {
+      //     text-align: left;
+      //   }
+      // }
+    }
+  }
+  .submit-button-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    button {
+      width: 200px;
+    }
+  }
+}
+

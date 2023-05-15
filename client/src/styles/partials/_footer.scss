@@ -1,0 +1,21 @@
+@use "./variables";
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  min-height: 3.5rem;
+  .row {
+    width: 100%;
+  }
+}
+
+.footer {
+  background-color: variables.$mypink;
+}
+#nav-link {
+  color: variables.$text-color-white;
+}

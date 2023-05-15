@@ -1,0 +1,72 @@
+.form_container {
+  max-width: 27rem;
+  margin: 6rem auto 5rem;
+  border: 1px solid #ccc;
+  padding: 20px 20px;
+  border-radius: 5px;
+
+  .logo {
+    padding: 20px;
+  }
+
+  .form {
+    .form-label {
+      margin-bottom: 5px;
+      padding: 10px;
+      display: block;
+      font-weight: bold;
+    }
+    .form-control {
+      border-radius: 0;
+      margin-bottom: 5px;
+    }
+    .checkboxes-signup {
+      margin-top: 5px;
+      padding: 10px;
+    }
+  }
+  .login-fix {
+    margin-top: 20px;
+  }
+  .icon-buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .icons-container {
+    margin: 20px;
+  }
+}
+
+// ______________MEDIA QUERIES_______________
+
+// Extra small devices (phones, 600px and down) max-width: 600px
+@media (max-width: 800px) {
+  body {
+    .container_login {
+      margin: 7rem auto 7rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    .container_login {
+      max-width: 19rem;
+    }
+  }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// // @media all and (max-width: 600px) {...}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// // @media all and (min-width: 600px) {...}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// // @media all and (min-width: 768px) {...}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// // @media all and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// // @media all and (min-width: 1200px) {...}

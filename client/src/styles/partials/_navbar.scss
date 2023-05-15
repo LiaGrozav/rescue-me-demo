@@ -1,0 +1,16 @@
+@use "./variables";
+
+.nav_nav {
+  min-height: 5rem;
+}
+
+#header {
+  max-width: 9999px;
+}
+
+#nav {
+  background-color: variables.$mypink;
+}
+.nav-link {
+  color: variables.$text-color-white;
+}

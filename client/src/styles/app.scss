@@ -1,0 +1,27 @@
+@use "./partials/reset";
+@use "./partials/footer";
+@use "./partials/navbar";
+
+@use "./About.scss";
+@use "./AdoptionProcess.scss";
+@use "./Checkbox.scss";
+@use "./Contact.scss";
+@use "./Donate.scss";
+@use "./Filters.scss";
+@use "./Foster.scss";
+@use "./GiveForAdoptionForm.scss";
+@use "./form.scss";
+@use "./Pages.scss";
+@use "./Petcard.scss";
+@use "./Petprofile.scss";
+@use "./Petsearchpage.scss";
+@use "./ShelterSearch.scss";
+@use "./UserProfile.scss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Capriola&family=Raleway:wght@400;600&display=swap');
+@import "~bootstrap/scss/bootstrap";
+@import "./button.scss";
+// bootstrap overrides styles of home scss file, this is a workaround to make home scss file work (to be discussed possible solution in the future
+@import "./Home";
+

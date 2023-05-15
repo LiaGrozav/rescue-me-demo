@@ -1,0 +1,104 @@
+.petsearchpage_cont {
+  margin: 7rem auto 7rem;
+
+  display: flex;
+  justify-content: space-around;
+
+  .filters-list {
+    border: 1px solid rgb(199, 195, 195);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin: 0 2rem;
+
+    .btn-reset {
+      margin-top: 10px;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+// ______________MEDIA QUERIES_______________
+
+// Extra small devices (phones, 600px and down) max-width: 600px
+@media (max-width: 600px) {
+  body {
+    .petsearchpage_cont {
+      display: flex;
+      flex-direction: column;
+      .filters-list {
+        margin: 0 2rem;
+        margin-bottom: 2rem;
+        width: auto;
+      }
+    }
+  }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// // @media all and (max-width: 600px) {...}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// // @media all and (min-width: 600px) {...}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// // @media all and (min-width: 768px) {...}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// // @media all and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// // @media all and (min-width: 1200px) {...}
+
+// .petsearchpage_cont {
+//   margin-top: 7rem;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   .filters-list {
+//     // margin-right: 5vh;
+//     // width: 20%;
+//     // height: 70vh;
+//     border: 1px solid rgb(199, 195, 195);
+//     border-radius: 5px;
+//     // display: flex;
+//     // flex-direction: row;
+//     // justify-content: space-around;
+//     padding: 10px;
+//     /* background-color: rgb(92, 107, 194); */
+//     // margin-top: 10vh;
+//     // margin-bottom: 5vh;
+//     // button:width:30%
+//     .form-control {
+//       padding: 0.25rem 0.5rem;
+
+//       font-size: 0.875rem;
+//       border: 1px solid #ced4da;
+//       border-radius: 0.25rem;
+//       font-weight: 400;
+//       line-height: 1.5;
+//       color: #212529;
+//       background-color: #fff;
+//     }
+//     .btn-reset {
+//       height: 5rem;
+//       margin-top: 60px;
+//     }
+//   }
+//   .cards {
+//     // margin-top:10vh;
+//     // width: 90%;
+//     height: 100%;
+//     display: grid;
+//     grid-template-rows: repeat(6, 1fr);
+//     grid-template-columns: repeat(4, 1fr);
+
+//     // grid-template-columns: fit-content;
+//     gap: 5px;
+//   }
+// }

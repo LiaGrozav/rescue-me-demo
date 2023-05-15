@@ -1,0 +1,56 @@
+@use "../styles/partials/variables";
+// ------Buttons inside of a card------
+.btn_cont {
+  width: 100%;
+  text-align: center;
+  background-color: variables.$mypink;
+  border-color: transparent;
+}
+
+.btn_cont:hover {
+  background-color: variables.$mylightbrown;
+  border-color: transparent;
+}
+
+// ------Larger buttons------
+.btn_lgr {
+  width: 11rem;
+  height: 3rem;
+  color: black;
+  border-color: transparent;
+  text-align: center;
+  background-color: variables.$mycolor-pink;
+}
+
+.btn_lgr:hover {
+  background-color: variables.$mylightbrown;
+  border-color: transparent;
+}
+
+// ------Save button (UserProfileSettings) ------
+
+.btn_sv {
+  width: 11rem;
+  border-color: transparent;
+  text-align: center;
+  background-color: variables.$mycolor-green;
+}
+
+.btn_sv:hover {
+  background-color: variables.$mylightbrown;
+  border-color: transparent;
+}
+
+// ------Delete button (UserProfileSettings) ------
+
+.btn_del {
+  width: 11rem;
+  border-color: transparent;
+  text-align: center;
+  background-color: variables.$mycolor-red;
+}
+
+.btn_del:hover {
+  background-color: variables.$mylightbrown;
+  border-color: transparent;
+}

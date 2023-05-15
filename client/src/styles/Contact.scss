@@ -1,0 +1,20 @@
+.container-contact {
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 5px;
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .contact_form {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .form-group {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

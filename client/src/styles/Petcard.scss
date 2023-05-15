@@ -1,0 +1,77 @@
+.card_petcard {
+  width: 12rem;
+  height: 17rem;
+  .card-body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    .heart {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .heart:hover {
+      color: red;
+      width: 2rem;
+      height: 2rem;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .linkpet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      padding: 1rem !important;
+      .card-title {
+        margin: 0;
+      }
+    }
+    .linkpet:hover {
+      background-color: blue;
+      color: white;
+    }
+  }
+}
+
+// ______________MEDIA QUERIES_______________
+
+// Small devices (portrait tablets and large phones, 600px and up) min-width: 600px
+@media (max-width: 600px) {
+  body {
+    .card_petcard {
+      width: 45%;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// Medium devices (landscape tablets, 768px and up) min-width: 768px
+// @media (min-width: 768px) {
+//   body {
+
+//   }
+// }
+
+/* Extra small devices (phones, 600px and down) */
+// @media all and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+// @media all and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+// @media all and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+// @media all and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media all and (min-width: 1200px) {...}

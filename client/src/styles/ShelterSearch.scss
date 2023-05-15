@@ -1,0 +1,47 @@
+.cont-shelter {
+  margin-top: 20rem;
+
+  .card {
+    max-width: 45rem;
+    margin: auto;
+    position: relative;
+    transform: translateY(-50%);
+  }
+}
+
+// ______________MEDIA QUERIES_______________
+
+// Extra small devices (phones, 600px and down) max-width: 600px
+@media (max-width: 600px) {
+  body {
+    .cont-shelter {
+      margin: 19rem 3rem 0rem 3rem;
+
+      .card {
+        max-width: 45rem;
+        margin: auto;
+        position: relative;
+        transform: translateY(-50%);
+        .row {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// // @media all and (max-width: 600px) {...}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// // @media all and (min-width: 600px) {...}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// // @media all and (min-width: 768px) {...}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// // @media all and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// // @media all and (min-width: 1200px) {...}
