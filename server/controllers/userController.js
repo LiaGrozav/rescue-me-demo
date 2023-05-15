@@ -183,14 +183,21 @@ exports.deleteMe = async (req, res, next) => {
   }
 };
 
-exports.getShelters =  async (req, res) => {
+exports.getShelters = async (req, res, next) => {
   try {
-    const users = await User.find({ shelter: true });
-    console.log(users)
+    const { city } = req.query;
+    const query = { shelter: true };
+
+    if (city) {
+      query.city = city.toLowerCase();
+    }
+
+    const shelters = await User.find(query);
+
     res.status(200).json({
       status: "success",
       data: {
-        users
+        shelters,
       },
     });
   } catch (err) {
