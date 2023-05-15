@@ -45,16 +45,15 @@
       //   }
       // }
     }
-  }
-  .submit-button-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    .submit-button-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
 
-    button {
-      width: 200px;
+      button {
+        width: 200px;
+      }
     }
   }
 }
-
