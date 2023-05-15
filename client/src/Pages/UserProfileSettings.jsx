@@ -16,18 +16,11 @@ const UserProfileSettings = () => {
   // track any errors that occur during uploading
   const [newName, setNewName] = useState("");
   const [newEmail, setNewEmail] = useState("");
-  console.log(user);
-  
+
   useEffect(() => {
-    console.log("User object in useEffect:", user);
-    if (user && user.user && user.user.photoURL) {
-      setPhoto(user.user.photoURL);
-    }
+    user?.user.photoURL && setPhoto(user.user.photoURL);
   }, [user]);
 
-  console.log("User object in component:", user);
-
-  
   const handleUploadPhoto = (event) => {
     const file = event.target.files[0];
     console.log(file);

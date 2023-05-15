@@ -45,7 +45,7 @@ const GiveForAdoptionForm = () => {
   const [size, setSize] = useState("");
   const [gender, setGender] = useState("");
   const [color, setColor] = useState("");
-  const [city, setCity] = useState("");
+  const [location, setLocation] = useState("");
   const [goodWith, setGoodWith] = useState("");
   const [description, setDescription] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -72,7 +72,7 @@ const GiveForAdoptionForm = () => {
         size,
         gender,
         color,
-        city,
+        location,
         goodWith,
         description,
       });
@@ -94,7 +94,7 @@ const GiveForAdoptionForm = () => {
         onSubmit={handleSubmitGiveForAdoptionForm}
         className="give-for-adoption-form"
       >
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Name</Form.Label>
           <input
             type="text"
@@ -104,17 +104,16 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Type of pet</Form.Label>
           <Select
-          className="custom-select"
             options={petType}
             placeholder="Select type of pet"
             onChange={(event) => setType(event.value)}
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Breed</Form.Label>
           <input
             type="text"
@@ -124,7 +123,7 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Age</Form.Label>
           <input
             type="text"
@@ -134,27 +133,25 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Size</Form.Label>
           <Select
-          className="custom-select"
             options={petSize}
             placeholder="Select size"
             onChange={(event) => setSize(event.value)}
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Gender</Form.Label>
           <Select
-          className="custom-select"
             options={petGender}
             placeholder="Select gender"
             onChange={(event) => setGender(event.value)}
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Color</Form.Label>
           <input
             type="text"
@@ -164,27 +161,26 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
-          <Form.Label>City</Form.Label>
+        <Form.Group>
+          <Form.Label>Current location</Form.Label>
           <input
             type="text"
             placeholder="Enter pet's current location"
-            value={city}
-            onChange={(event) => setCity(event.target.value)}
+            value={location}
+            onChange={(event) => setLocation(event.target.value)}
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Good with ...</Form.Label>
           <Select
-          className="custom-select"
             options={petGoodWith}
             placeholder="Select size"
             onChange={(event) => setGoodWith(event.value)}
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Description</Form.Label>
           <input
             type="text"
@@ -194,33 +190,30 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Vaccinated</Form.Label>
           <Select
-          className="custom-select"
             options={petVaccinated}
             placeholder="Vaccinated"
             onChange={(event) => setVaccinated(event.value)}
           />
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group>
           <Form.Label>Sterilized</Form.Label>
           <Select
-          className="custom-select"
             options={petSterilized}
             placeholder="Sterilized"
             onChange={(event) => setSterilized(event.value)}
           />
         </Form.Group>
 
-        
-      </Form>
-      <div>
+        <div>
           <Button variant="light" type="submit" className="submit-button-form">
             Submit
           </Button>
         </div>
+      </Form>
     </Container>
   );
 };

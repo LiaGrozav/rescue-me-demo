@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { useState, useContext, useEffect } from "react";
