@@ -107,6 +107,7 @@ const GiveForAdoptionForm = () => {
         <Form.Group>
           <Form.Label>Type of pet</Form.Label>
           <Select
+            className="custom-select"
             options={petType}
             placeholder="Select type of pet"
             onChange={(event) => setType(event.value)}
@@ -136,6 +137,8 @@ const GiveForAdoptionForm = () => {
         <Form.Group>
           <Form.Label>Size</Form.Label>
           <Select
+            className="custom-select"
+
             options={petSize}
             placeholder="Select size"
             onChange={(event) => setSize(event.value)}
@@ -145,6 +148,7 @@ const GiveForAdoptionForm = () => {
         <Form.Group>
           <Form.Label>Gender</Form.Label>
           <Select
+            className="custom-select"
             options={petGender}
             placeholder="Select gender"
             onChange={(event) => setGender(event.value)}
@@ -173,7 +177,7 @@ const GiveForAdoptionForm = () => {
 
         <Form.Group>
           <Form.Label>Good with ...</Form.Label>
-          <Select
+            className="custom-select"
             options={petGoodWith}
             placeholder="Select size"
             onChange={(event) => setGoodWith(event.value)}
@@ -193,6 +197,7 @@ const GiveForAdoptionForm = () => {
         <Form.Group>
           <Form.Label>Vaccinated</Form.Label>
           <Select
+            className="custom-select"
             options={petVaccinated}
             placeholder="Vaccinated"
             onChange={(event) => setVaccinated(event.value)}
@@ -202,6 +207,7 @@ const GiveForAdoptionForm = () => {
         <Form.Group>
           <Form.Label>Sterilized</Form.Label>
           <Select
+            className="custom-select"
             options={petSterilized}
             placeholder="Sterilized"
             onChange={(event) => setSterilized(event.value)}
