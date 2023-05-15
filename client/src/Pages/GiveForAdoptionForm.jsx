@@ -107,7 +107,7 @@ const GiveForAdoptionForm = () => {
         <Form.Group className="form-group">
           <Form.Label>Type of pet</Form.Label>
           <Select
-          className="custom-select"
+            className="custom-select"
             options={petType}
             placeholder="Select type of pet"
             onChange={(event) => setType(event.value)}
@@ -137,7 +137,7 @@ const GiveForAdoptionForm = () => {
         <Form.Group className="form-group">
           <Form.Label>Size</Form.Label>
           <Select
-          className="custom-select"
+            className="custom-select"
             options={petSize}
             placeholder="Select size"
             onChange={(event) => setSize(event.value)}
@@ -147,7 +147,7 @@ const GiveForAdoptionForm = () => {
         <Form.Group className="form-group">
           <Form.Label>Gender</Form.Label>
           <Select
-          className="custom-select"
+            className="custom-select"
             options={petGender}
             placeholder="Select gender"
             onChange={(event) => setGender(event.value)}
@@ -177,7 +177,7 @@ const GiveForAdoptionForm = () => {
         <Form.Group className="form-group">
           <Form.Label>Good with ...</Form.Label>
           <Select
-          className="custom-select"
+            className="custom-select"
             options={petGoodWith}
             placeholder="Select size"
             onChange={(event) => setGoodWith(event.value)}
@@ -197,7 +197,7 @@ const GiveForAdoptionForm = () => {
         <Form.Group className="form-group">
           <Form.Label>Vaccinated</Form.Label>
           <Select
-          className="custom-select"
+            className="custom-select"
             options={petVaccinated}
             placeholder="Vaccinated"
             onChange={(event) => setVaccinated(event.value)}
@@ -207,20 +207,18 @@ const GiveForAdoptionForm = () => {
         <Form.Group className="form-group">
           <Form.Label>Sterilized</Form.Label>
           <Select
-          className="custom-select"
+            className="custom-select"
             options={petSterilized}
             placeholder="Sterilized"
             onChange={(event) => setSterilized(event.value)}
           />
         </Form.Group>
-
-        
-      </Form>
-      <div>
+        <div>
           <Button variant="light" type="submit" className="submit-button-form">
             Submit
           </Button>
         </div>
+      </Form>
     </Container>
   );
 };
