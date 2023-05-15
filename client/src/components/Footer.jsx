@@ -30,7 +30,6 @@ const Footer = () => {
           </Nav>
         </Col>
         <Col xs={12} md={6} className="text-center">
-
           <Nav className="justify-content-center justify-content-md-end pb-1">
             <Nav.Item>
               <Nav.Link href="#" id="nav-link">
@@ -46,7 +45,6 @@ const Footer = () => {
               <Nav.Link href="#" id="nav-link">
                 <BsFillShareFill size={20} />
               </Nav.Link>
-
             </Nav.Item>
           </Nav>
         </Col>

@@ -10,9 +10,6 @@ axios.defaults.withCredentials = true;
 function LoginPage() {
   const { user, setUser, handleLogin } = useContext(PetContext);
 
-  // console.log(user);
-  // console.log(user.user.favorites)
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");

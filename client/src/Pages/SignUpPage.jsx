@@ -1,26 +1,21 @@
-import { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import Checkbox from "../components/Checkbox";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
-import PetContext from "../context/petsContextProvider";
 import axios from "axios";
-
 axios.defaults.withCredentials = true;
 
 const SignUpPage = () => {
-  const { updateUser } = useContext(PetContext);
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   // errorMessage is defined to store any error message that may occur during the sign-up process
-  const [shelter, setShelter] = useState(false);
-  const [city, setCity] = useState("");
+  const [isShelter, setIsShelter] = useState(false);
 
-  const handleCheckboxChange = (checked) => {
-    setShelter(checked);
+  const handleCheckboxChange = () => {
+    setIsShelter(!isShelter);
   };
 
   const handleSubmitSignUp = async (event) => {
@@ -31,18 +26,9 @@ const SignUpPage = () => {
         email,
         password,
         passwordConfirm,
-        shelter,
-        city,
-        //   city: "", // Add the city field from the user schema
-        // location: { // Add the location field from the user schema
-        //   type: "Point",
-        //   coordinates: [],
-        //   address: "",
-        //   description: ""
       });
       setErrorMessage("");
       alert("You are now a registered user");
-      updateUser({ name, email, shelter,city });
       // window.location.href = "/";
     } catch (error) {
       console.error(error);
@@ -64,17 +50,6 @@ const SignUpPage = () => {
                 placeholder="Enter your name"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
-              />
-            </Form.Group>
-
-            <Form.Group controlId="formCity" className="text-start">
-              <Form.Label>City</Form.Label>
-              <Form.Control
-                type="text"
-                className="form-control"
-                placeholder="Enter your city"
-                value={city}
-                onChange={(event) => setCity(event.target.value)}
               />
             </Form.Group>
 
@@ -114,7 +89,7 @@ const SignUpPage = () => {
             <div className="checkboxes-signup">
               <Checkbox
                 label="I am a shelter"
-                isChecked={shelter}
+                isChecked={isShelter}
                 onCheckboxChange={handleCheckboxChange}
               />
             </div>
