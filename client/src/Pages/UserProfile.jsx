@@ -9,7 +9,7 @@ const UserProfile = () => {
   const { user, loading } = useContext(PetContext);
   
   console.log("user:", user);
-  console.log("loading:", loading);
+  // console.log("loading:", loading);
 
   const handleSettings = () => {
     window.location.href = "/userprofilesettings"; // Navigate to settings page
