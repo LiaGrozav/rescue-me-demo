@@ -1,3 +1,4 @@
+@use "./partials/variables" as variables;
 .card_petcard {
   width: 12rem;
   height: 17rem;
@@ -32,6 +33,10 @@
       padding: 1rem !important;
       background-color:#d1b4a9;
       color:rgb(255 255 255);
+      h5{
+        color: #fff;}
+  border-color: transparent;
+  // text-align: center;
       border-radius:3px;
       .card-title {
         margin: 0;
@@ -40,6 +45,8 @@
     .linkpet:hover {
       background-color: #ffffff;
       color: #c89b89;
+  border-color: transparent;
+
       transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }
   }

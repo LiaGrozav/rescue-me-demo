@@ -53,9 +53,9 @@ const PetProfile = () => {
             {pet.breed} | {pet.size} | City | Country
           </h4>
           <h4>SHELTER</h4>
-          <a href="/adoptionprocess">
-            <Button className="btn_lgr">Adopt me</Button>
-          </a>
+         
+            <Button className="btn_lgr"  href={"/adoptionprocess"}>Adopt me</Button>
+ 
         </div>
         <div className="pet_description_info">
           <p>

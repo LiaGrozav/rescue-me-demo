@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import PetContext from "../context/petsContextProvider";
 import "../styles/GiveForAdoptionForm.scss";
 import { Container, Form, Button } from "react-bootstrap";
@@ -48,14 +48,51 @@ const GiveForAdoptionForm = () => {
   const [city, setCity] = useState("");
   const [goodWith, setGoodWith] = useState("");
   const [description, setDescription] = useState("");
+  const [photoURL, setPhotoURL] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
   // errorMessage is defined to store any error message that may occur during the sign-up process
   const [sterilized, setSterilized] = useState("");
   const [vaccinated, setVaccinated] = useState("false");
-  const { user } = useContext(PetContext);
+  const { user, setUser } = useContext(PetContext);
 
   axios.defaults.withCredentials = true;
-  console.log(user);
+
+  // useEffect(() => {
+  //   console.log("Pet object in useEffect:", user.user.pets);
+  //   if (user && user.user && user.user.pets.photoURL) {
+  //     setPhotoURL(user.user.pets.photoURL);
+  //   }
+  // }, [user]);
+
+  console.log("User object in component:", user);
+
+  const handleUploadPetPhoto = async (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onloadend = async () => {
+      const photoURL = reader.result;
+
+      try {
+        const res = await axios.patch(
+          "http://localhost:4000/api/pets/updatePet",
+          {
+            petId: user.user.pets._id,
+            photoURL,
+          }
+        );
+        setUser((prevUser) => {
+          const updatedPets = prevUser.user.pets.map((pet) =>
+            pet._id === res.data.data._id ? { ...pet, photoURL } : pet
+          );
+          return { ...prevUser, user: { ...prevUser.user, pets: updatedPets } };
+        });
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  };
 
   const handleSubmitGiveForAdoptionForm = async (event) => {
     event.preventDefault();
@@ -75,6 +112,7 @@ const GiveForAdoptionForm = () => {
         city,
         goodWith,
         description,
+        photoURL,
       });
 
       setErrorMessage("");
@@ -192,6 +230,11 @@ const GiveForAdoptionForm = () => {
             value={description}
             onChange={(event) => setDescription(event.target.value)}
           />
+        </Form.Group>
+
+        <Form.Group className="form-group">
+          <Form.Label>Photo</Form.Label>
+          <input type="file" accept="image/*" onChange={handleUploadPetPhoto} />
         </Form.Group>
 
         <Form.Group className="form-group">

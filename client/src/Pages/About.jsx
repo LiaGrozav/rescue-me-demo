@@ -65,7 +65,7 @@ const About = () => {
                   alt={image.alt}
                 />
                 <Carousel.Caption>
-                  <h3>{image.caption}</h3>
+           
                 </Carousel.Caption>
               </Carousel.Item>
             ))}
