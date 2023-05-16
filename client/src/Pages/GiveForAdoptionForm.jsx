@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import PetContext from "../context/petsContextProvider";
 import "../styles/GiveForAdoptionForm.scss";
 import { Container, Form, Button } from "react-bootstrap";
@@ -38,6 +39,7 @@ const petGoodWith = [
 ];
 
 const GiveForAdoptionForm = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [type, setType] = useState("");
   const [breed, setBreed] = useState("");
@@ -50,19 +52,13 @@ const GiveForAdoptionForm = () => {
   const [description, setDescription] = useState("");
   const [photoURL, setPhotoURL] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
   // errorMessage is defined to store any error message that may occur during the sign-up process
   const [sterilized, setSterilized] = useState("");
   const [vaccinated, setVaccinated] = useState("false");
-  const { user, setUser } = useContext(PetContext);
+  const { user, setUser, fetchMe } = useContext(PetContext);
 
   axios.defaults.withCredentials = true;
-
-  // useEffect(() => {
-  //   console.log("Pet object in useEffect:", user.user.pets);
-  //   if (user && user.user && user.user.pets.photoURL) {
-  //     setPhotoURL(user.user.pets.photoURL);
-  //   }
-  // }, [user]);
 
   console.log("User object in component:", user);
 
@@ -71,31 +67,14 @@ const GiveForAdoptionForm = () => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
 
-    reader.onloadend = async () => {
-      const photoURL = reader.result;
-
-      try {
-        const res = await axios.patch(
-          "http://localhost:4000/api/pets/updatePet",
-          {
-            petId: user.user.pets._id,
-            photoURL,
-          }
-        );
-        setUser((prevUser) => {
-          const updatedPets = prevUser.user.pets.map((pet) =>
-            pet._id === res.data.data._id ? { ...pet, photoURL } : pet
-          );
-          return { ...prevUser, user: { ...prevUser.user, pets: updatedPets } };
-        });
-      } catch (error) {
-        console.error(error);
-      }
+    reader.onloadend = () => {
+      setPhotoURL(reader.result);
     };
   };
 
   const handleSubmitGiveForAdoptionForm = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
     try {
       const response = await axios.post("http://localhost:4000/api/pets", {
@@ -112,13 +91,22 @@ const GiveForAdoptionForm = () => {
         city,
         goodWith,
         description,
-        photoURL,
+        photo: photoURL,
       });
+      console.log(response);
 
-      setErrorMessage("");
-      alert(
-        "Thank you for your trust! We hope to find a home for your pet soon!"
-      );
+      if (response.status < 300) {
+        setLoading(false);
+        alert(
+          "Thank you for your trust! We hope to find a home for your pet soon!"
+        );
+        fetchMe();
+        navigate("/userprofile");
+      } else {
+        setLoading(false);
+        alert("Server Error");
+        setErrorMessage("Something went wrong");
+      }
     } catch (error) {
       console.error(error);
       setErrorMessage("Please check your inputs and try again");
@@ -257,7 +245,12 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
         <div>
-          <Button variant="light" type="submit" className="submit-button-form">
+          <Button
+            disabled={loading}
+            variant="light"
+            type="submit"
+            className="submit-button-form"
+          >
             Submit
           </Button>
         </div>

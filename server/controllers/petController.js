@@ -37,7 +37,7 @@ exports.favPets = async (req, res, next) => {
         select: "-__v",
       });
 
-    res.send({user});
+    res.send({ user });
   } catch (err) {
     next(err);
   }
@@ -70,7 +70,7 @@ exports.removeFavoritePet = async (req, res, next) => {
         select: "-__v",
       });
 
-    res.send({user});
+    res.send({ user });
   } catch (err) {
     next(err);
   }
@@ -121,7 +121,23 @@ exports.getPet = async (req, res, next) => {
 
 exports.createPet = async (req, res, next) => {
   try {
-    const newPet = await Pet.create({ ...req.body, user: req.user._id });
+    // Luke added this
+    let photoURL = null;
+    console.log(req.body.photo);
+
+    if (req.body.photo) {
+      const result = await cloudinary.uploader.upload(req.body.photo, {
+        public_id: uuidv4(),
+      });
+
+      photoURL = result.secure_url;
+      console.log("photo", photoURL);
+    }
+    const newPet = await Pet.create({
+      ...req.body,
+      photoURL,
+      user: req.user._id,
+    });
 
     await User.findByIdAndUpdate(
       req.user._id,
@@ -232,33 +248,28 @@ exports.deletePet = async (req, res, next) => {
   }
 };
 
-
 exports.getPetsWithin = async (req, res, next) => {
   try {
-
     const { distance, latlng, unit } = req.params;
-    
-    const [ lat, lng ] = latlng.split(",");
+
+    const [lat, lng] = latlng.split(",");
     const radius = distance / 6378.1;
-    
 
     if (!lat || !lng) {
-      next( new Error ("PLease provide latitude and longitude"))
+      next(new Error("PLease provide latitude and longitude"));
     }
-   
 
     const pets = await Pet.find({
-      location: {$geoWithin: {$centerSphere: [[lng, lat], radius]}}
-    })
+      location: { $geoWithin: { $centerSphere: [[lng, lat], radius] } },
+    });
 
-     res.status(200).json({
-       status: "success",
-       data: {
-         data: pets
-       },
-     });
-    
+    res.status(200).json({
+      status: "success",
+      data: {
+        data: pets,
+      },
+    });
   } catch (err) {
-    next(err)
+    next(err);
   }
-}
+};

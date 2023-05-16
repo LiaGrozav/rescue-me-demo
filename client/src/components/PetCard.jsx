@@ -72,7 +72,10 @@ const PetCard = ({ pet, rdmpet }) => {
   console.log(user);
   return (
     <Card className="card_petcard">
-      <Card.Img variant="top" src="https://picsum.photos/id/40/200/150" />
+      <Card.Img
+        variant="top"
+        src={displayPet.photoURL ? displayPet.photoURL : "https://picsum.photos/id/200/300"}
+      />
       <Card.Body>
         <FaHeart
           className="heart"

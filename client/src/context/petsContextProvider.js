@@ -159,6 +159,7 @@ export const PetContextProvider = ({ children }) => {
         updateMe,
         error,
         updateUser,
+        fetchMe,
       }}
     >
       {children}
