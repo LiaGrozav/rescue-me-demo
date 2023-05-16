@@ -22,6 +22,8 @@ const UserProfile = () => {
   const addedPets = user.user?.pets || [];
   const favorites = user.user?.favorites || [];
 
+  
+
   return (
     <div className="user-profile">
       <div className="user-data">

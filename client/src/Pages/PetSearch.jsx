@@ -21,6 +21,7 @@ const PetSearch = () => {
     daysOnSite: "",
     size: "",
     type: "",
+    city:'',
   });
   console.log(filterCriteria);
   const resetFilters = () => {
@@ -34,6 +35,7 @@ const PetSearch = () => {
       daysOnSite: "",
       size: "",
       type: "",
+      city: "",
     });
   };
   let datepet = allpets.map((date) => date.createdAt);
@@ -73,10 +75,10 @@ const PetSearch = () => {
         (filterCriteria.vaccinated === "" ||
           pet.vaccinated === filterCriteria.vaccinated) &&
         (filterCriteria.color === "" || pet.color === filterCriteria.color) &&
-        (filterCriteria.goodWith === "" ||
-          pet.goodWith === filterCriteria.goodWith) &&
+        (filterCriteria.goodWith === "" || pet.goodWith === filterCriteria.goodWith) &&
         (filterCriteria.size === "" || pet.size === filterCriteria.size) &&
-        (filterCriteria.type === "" || pet.type === filterCriteria.type)
+        (filterCriteria.type === "" || pet.type === filterCriteria.type)&&
+        (filterCriteria.city === "" || pet.city === filterCriteria.city)
       );
     });
     setFilteredPets(filtered);
@@ -120,6 +122,8 @@ const PetSearch = () => {
         }
         filteredDaysonSiteHandler={(e) =>
           handleFilterChange("daysOnSite", e.target.value)
+        }
+        filteredCityHandler={(e) => handleFilterChange("city", e.target.value)
         }
         resetFiltersHandler={resetFilters}
         filterCriteria={filterCriteria}

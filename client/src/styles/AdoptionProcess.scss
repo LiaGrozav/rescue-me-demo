@@ -1,6 +1,18 @@
 @use "./partials/variables";
 
 .adop_proc_cont {
+
+  // .background-container {
+  //   position: absolute;
+  //   width: 100vw;
+  //   height: 100%;
+  //   top: 0;
+  //   z-index: -1;
+  //   .image {
+  //     width: 100vw;
+  //     height: 100%;
+  //     object-fit: cover;
+  //   }
   .hero {
     background-size: cover;
     margin-top: 5rem;
@@ -11,9 +23,23 @@
     flex-wrap: wrap;
     .mask {
       width: 80%;
-      height: 10rem;
+      height:10rem;
     }
   }
+
+  // .title_banner {
+  //   margin: 8rem auto 4rem;
+  //   color: floralwhite;
+  //   background-color: rgba(17, 16, 16, 50%);
+  //   padding: 30px;
+  //   border-radius: 4px;
+  //   width: 60%;
+  //   left: 0;
+  //   h1,
+  //   h2 {
+  //     text-align: center;
+  //   }
+  // }
 
   .cards_container {
     display: flex;
@@ -24,6 +50,7 @@
     padding: 0 1rem 6rem 1rem;
     .card {
       width: 100%;
+
     }
 
     .button_adop_card {
@@ -31,7 +58,7 @@
       background-color: grey;
     }
 
-    .ad_card {
+    .ad_card{
       flex-direction: column;
     }
   }
@@ -43,8 +70,14 @@
   body {
     .adop_proc_cont {
       margin: 5rem auto 8rem;
-
+      // .background-container {
+      //   .image {
+      //     width: 100%;
+      //     height: auto;
+      //   }
+      // }
       .cards_container {
+        //small screens -----> check picture
         flex-direction: column;
         align-items: center;
       }
@@ -59,3 +92,18 @@
     }
   }
 }
+
+// /* Extra small devices (phones, 600px and down) */
+// // @media all and (max-width: 600px) {...}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// // @media all and (min-width: 600px) {...}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// // @media all and (min-width: 768px) {...}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// // @media all and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// // @media all and (min-width: 1200px) {...}

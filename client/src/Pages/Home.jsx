@@ -3,6 +3,7 @@ import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import FactsCarousel from "../components/FactsCarousel";
 import MeetThemContainer from "../components/MeetThemContainer";
 
+
 const Home = () => {
   return (
     <Container fluid className="cont">
@@ -17,9 +18,9 @@ const Home = () => {
             </p>
             <p>Give a homeless pet a chance at happiness by adopting today.</p>
           </Col>
-          <Col className="image-container">
+          <Col>
             <Image
-              src="/images/smilydog.jpeg"
+              src="https://picsum.photos/500/400"
               rounded
               alt="dogscats"
               className="img-home"

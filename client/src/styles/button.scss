@@ -14,15 +14,12 @@
 
 // ------Larger buttons------
 .btn_lgr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 11rem;
   height: 3rem;
-  color: variables.$text-color-white;
+  color: black;
   border-color: transparent;
   text-align: center;
-  background-color: variables.$mygreen;
+  background-color: variables.$mycolor-pink;
 }
 
 .btn_lgr:hover {

@@ -45,7 +45,7 @@ const GiveForAdoptionForm = () => {
   const [size, setSize] = useState("");
   const [gender, setGender] = useState("");
   const [color, setColor] = useState("");
-  const [location, setLocation] = useState("");
+  const [city, setCity] = useState("");
   const [goodWith, setGoodWith] = useState("");
   const [description, setDescription] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -72,7 +72,7 @@ const GiveForAdoptionForm = () => {
         size,
         gender,
         color,
-        location,
+        city,
         goodWith,
         description,
       });
@@ -94,7 +94,7 @@ const GiveForAdoptionForm = () => {
         onSubmit={handleSubmitGiveForAdoptionForm}
         className="give-for-adoption-form"
       >
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Name</Form.Label>
           <input
             type="text"
@@ -104,7 +104,7 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Type of pet</Form.Label>
           <Select
             className="custom-select"
@@ -114,7 +114,7 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Breed</Form.Label>
           <input
             type="text"
@@ -124,7 +124,7 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Age</Form.Label>
           <input
             type="text"
@@ -134,18 +134,17 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Size</Form.Label>
           <Select
             className="custom-select"
-
             options={petSize}
             placeholder="Select size"
             onChange={(event) => setSize(event.value)}
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Gender</Form.Label>
           <Select
             className="custom-select"
@@ -155,7 +154,7 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Color</Form.Label>
           <input
             type="text"
@@ -165,18 +164,19 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group>
-          <Form.Label>Current location</Form.Label>
+        <Form.Group className="form-group">
+          <Form.Label>City</Form.Label>
           <input
             type="text"
             placeholder="Enter pet's current location"
-            value={location}
-            onChange={(event) => setLocation(event.target.value)}
+            value={city}
+            onChange={(event) => setCity(event.target.value)}
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Good with ...</Form.Label>
+          <Select
             className="custom-select"
             options={petGoodWith}
             placeholder="Select size"
@@ -184,7 +184,7 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Description</Form.Label>
           <input
             type="text"
@@ -194,7 +194,7 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Vaccinated</Form.Label>
           <Select
             className="custom-select"
@@ -204,7 +204,7 @@ const GiveForAdoptionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label>Sterilized</Form.Label>
           <Select
             className="custom-select"
@@ -213,7 +213,6 @@ const GiveForAdoptionForm = () => {
             onChange={(event) => setSterilized(event.value)}
           />
         </Form.Group>
-
         <div>
           <Button variant="light" type="submit" className="submit-button-form">
             Submit

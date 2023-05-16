@@ -4,18 +4,38 @@
   text-align: center;
   padding: 2rem;
   padding-top: 5rem;
+
+  .row {
+    grid-gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
   h1 {
     margin: 0.5rem;
     padding: 0.5rem;
   }
-  .row {
-    grid-gap: 0.5rem;
-    margin-top: 2rem;
-    .foster-text {
-      text-align: justify;
-      h2 {
-        text-align: center;
-      }
-    }
+}
+
+.foster-text {
+  text-align: justify;
+  h2 {
+    text-align: center;
   }
 }
+
+// .foster-form {
+//   text-align: justify;
+//   margin: 1rem 1rem 2rem 1rem;
+//   padding: 1rem;
+//   border: 0.1em solid #ccc;
+//   border-radius: 10px;
+//   form {
+//     width: 100%;
+//   }
+//   h2 {
+//     text-align: center;
+//   }
+//   #button {
+//     padding-top: 1rem;
+//   }
+// }

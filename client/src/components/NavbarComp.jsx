@@ -22,7 +22,10 @@ function NavbarComp() {
             <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>
-            <NavDropdown title="Adopt" id="collapsible-nav-dropdown">
+            <NavDropdown
+              title="Adopt"
+              id="collapsible-nav-dropdown"
+            >
               <NavDropdown.Item as={Link} to="/adoptionprocess">
                 Adopting Rules/Process
               </NavDropdown.Item>
