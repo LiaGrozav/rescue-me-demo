@@ -6,12 +6,13 @@
       padding: 20px 20px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       .user-avatar-image {
         display: flex;
         justify-content: center;
         align-items: center;
         img {
+          border-radius: 10%;
           max-width: 400px;
           max-height: 400px;
         }
@@ -24,8 +25,8 @@
         margin-top: 20px;
 
         h1 {
-          padding: 20px;
-          margin: 20px;
+          // padding: 20px;
+          // margin: 20px;
         }
 
 
@@ -35,8 +36,8 @@
 
         .go-to-settings {
           display: flex;
-          flex-direction: row;
-          justify-content: space-between;
+          flex-direction: column;
+          // justify-content: space-between;
         }
         .checkboxes-userprofile {
           display: flex;

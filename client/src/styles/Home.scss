@@ -7,8 +7,9 @@
       flex-direction: column;
     }
     .first-block-home {
+      height:90vh;
       .first-block-text {
-        justify-content: center;
+        justify-content: start;
         text-align: center;
         margin-left: 3rem;
       }
@@ -72,10 +73,10 @@
 }
 
 .swiper-slide {
-  color: white;
+  color:#260101;
   text-align: center;
   font-size: 18px;
-  background: black;
+  background: transparent;
 
   /* Center slide text vertically */
   display: flex !important;
@@ -94,6 +95,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 
 // ______________MEDIA QUERIES_______________
 

@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import FactsCarousel from "../components/FactsCarousel";
 import MeetThemContainer from "../components/MeetThemContainer";
+import homepage from "../images/homepage.jpg"
 
 
 const Home = () => {
@@ -19,10 +20,9 @@ const Home = () => {
             <p>Give a homeless pet a chance at happiness by adopting today.</p>
           </Col>
           <Col>
+       
             <Image
-              src="https://picsum.photos/500/400"
-              rounded
-              alt="dogscats"
+              src={homepage} alt="My Image"
               className="img-home"
             ></Image>
           </Col>
@@ -33,9 +33,11 @@ const Home = () => {
             <Row>
               <Col className="meet_them">
                 <MeetThemContainer />
-                <Button className="btn_lgr" href={"/petsearch"}>
+                <div className="div-btn-lgr">      
+                   <Button className="btn_lgr" href={"/petsearch"}>
                   Check more
-                </Button>
+                </Button></div>
+         
               </Col>
             </Row>
           </Col>

@@ -14,12 +14,19 @@
 
 // ------Larger buttons------
 .btn_lgr {
+  display:inline-block;
   width: 11rem;
   height: 3rem;
-  color: black;
+  color: #fff;
   border-color: transparent;
-  text-align: center;
-  background-color: variables.$mycolor-pink;
+  // text-align: center;
+
+  background-color: variables.$mypink;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  
+  
 }
 
 .btn_lgr:hover {
@@ -53,4 +60,58 @@
 .btn_del:hover {
   background-color: variables.$mylightbrown;
   border-color: transparent;
+}
+
+.btn_filters{
+  color: #fff;
+  border-color: transparent;
+  background-color: variables.$mypink;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding:0.5rem;
+  border-radius: 5px;
+
+}
+
+.btn_filters:hover{
+  background-color: variables.$mylightbrown;
+  border-color: transparent;
+
+}
+.btn_adoption {
+  display:inline-block;
+  width: 11rem;
+  height: 3rem;
+  color: #fff;
+  border-color: transparent;
+
+  background-color: variables.$mypink;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_adoption:hover {
+  background-color: variables.$mylightbrown;
+  border-color: transparent;
+}
+.settings-button{
+  display:inline-block;
+  width: 7rem;
+  height: 3rem;
+  color: #fff;
+  border-color: transparent;
+
+  background-color: variables.$mypink;
+  display:flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.settings-button:hover{
+  background-color: variables.$mylightbrown;
+  border-color: transparent;
+  color:#fff
 }

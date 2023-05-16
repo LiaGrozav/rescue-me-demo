@@ -15,8 +15,8 @@ const AdoptionProcess = () => {
         <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
           <div className="d-flex justify-content-center align-items-center h-100">
             <div className="text-white">
-              <h1 className="mb-3">Heading</h1>
-              <h4 className="mb-3">Subheading</h4>
+              <h1 className="mb-3">Adoption Rules and Process</h1>
+              {/* <h4 className="mb-3">Subheading</h4> */}
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ const AdoptionProcess = () => {
         </Card>
 
         <Card>
-          <Card.Body className="ad_card">
+          <Card.Body className="ad_card_thatsit">
             <Card.Title> And that's it!</Card.Title>
             <Card.Text>
               All you need to do now is lay back and wait for our response! We

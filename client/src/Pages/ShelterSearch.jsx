@@ -46,12 +46,13 @@ const ShelterSearch = () => {
         </Card.Body>
       </Card>
 
-      <div>
+      <div className="show-shelters">
         <h3>Shelters:</h3>
         {shelters.map((shelter) => (
           <div key={shelter._id}>
             <p>Name: {shelter.name}</p>
             <p>City: {shelter.city}</p>
+            <p>Email:{shelter.email}</p>
             <hr />
           </div>
         ))}
