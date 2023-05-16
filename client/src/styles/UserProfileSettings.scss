@@ -6,13 +6,13 @@
   border-radius: 5px;
 
   .form-groups {
-    padding: 10px;
-    margin: 10px;
+    // padding: 10px;
+    // margin: 10px;
   }
 
   .form-inputs {
-    padding: 10px;
-    margin: 10px;
+    // padding: 10px;
+    // margin: 10px;
   }
 
   .delete-profile-btn {
@@ -22,5 +22,10 @@
 
   .btn_sv {
     padding: 10px;
+  }
+  .form-label{
+    margin:none;
+color:#3A5171;
+font-size: 2rem;
   }
 }

@@ -5,6 +5,11 @@
   text-align: center;
   background-color: variables.$mypink;
   border-color: transparent;
+  &:active {
+    outline: none !important;
+    border: none !important;
+    background-color: #d1b4a9 !important;
+  }
 }
 
 .btn_cont:hover {
@@ -14,7 +19,7 @@
 
 // ------Larger buttons------
 .btn_lgr {
-  display:inline-block;
+  display: inline-block;
   width: 11rem;
   height: 3rem;
   color: #fff;
@@ -22,11 +27,14 @@
   // text-align: center;
 
   background-color: variables.$mypink;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  
-  
+  &:active {
+    outline: none !important;
+    border: none !important;
+    background-color: #d1b4a9 !important;
+  }
 }
 
 .btn_lgr:hover {
@@ -62,56 +70,64 @@
   border-color: transparent;
 }
 
-.btn_filters{
+.btn_filters {
   color: #fff;
   border-color: transparent;
   background-color: variables.$mypink;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-  padding:0.5rem;
+  padding: 0.5rem;
   border-radius: 5px;
-
 }
 
-.btn_filters:hover{
+.btn_filters:hover {
   background-color: variables.$mylightbrown;
   border-color: transparent;
-
 }
 .btn_adoption {
-  display:inline-block;
+  display: inline-block;
   width: 11rem;
   height: 3rem;
   color: #fff;
   border-color: transparent;
 
   background-color: variables.$mypink;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  &:active {
+    outline: none !important;
+    border: none !important;
+    background-color: #d1b4a9 !important;
+  }
 }
 
 .btn_adoption:hover {
   background-color: variables.$mylightbrown;
   border-color: transparent;
 }
-.settings-button{
-  display:inline-block;
+.settings-button {
+  display: inline-block;
   width: 7rem;
   height: 3rem;
   color: #fff;
   border-color: transparent;
 
   background-color: variables.$mypink;
-  display:flex;
+  display: flex;
 
   align-items: center;
   justify-content: center;
+  &:active {
+    outline: none !important;
+    border: none !important;
+    background-color: #d1b4a9 !important;
+  }
 }
-.settings-button:hover{
+.settings-button:hover {
   background-color: variables.$mylightbrown;
   border-color: transparent;
-  color:#fff
+  color: #fff;
 }
