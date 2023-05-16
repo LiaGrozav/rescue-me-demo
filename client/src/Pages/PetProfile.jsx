@@ -25,7 +25,11 @@ const PetProfile = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://picsum.photos/id/200/300"
+                src={
+                  pet.photoURL
+                    ? pet.photoURL
+                    : "https://picsum.photos/id/200/300"
+                }
                 alt="First slide"
               />
             </Carousel.Item>
@@ -53,9 +57,10 @@ const PetProfile = () => {
             {pet.breed} | {pet.size} | City | Country
           </h4>
           <h4>SHELTER</h4>
-         
-            <Button className="btn_lgr"  href={"/adoptionprocess"}>Adopt me</Button>
- 
+
+          <Button className="btn_lgr" href={"/adoptionprocess"}>
+            Adopt me
+          </Button>
         </div>
         <div className="pet_description_info">
           <p>
