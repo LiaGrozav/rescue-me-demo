@@ -49,7 +49,7 @@ const AdoptionProcess = () => {
               Please click the button below, and download the file with all the
               information you need.
             </Card.Text>
-            <Button className="btn_cont">Download File</Button>
+            <Button className="btn_cont ">Download File</Button>
           </Card.Body>
         </motion.Card>
 

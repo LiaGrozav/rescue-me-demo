@@ -38,7 +38,7 @@ const UserProfile = () => {
               <Button
                 className="settings-button"
                 size="xs"
-                variant="light"
+                
                 onClick={handleSettings}
               > Settings
                 {/* <BiEdit /> */}
