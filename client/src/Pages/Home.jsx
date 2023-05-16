@@ -19,7 +19,7 @@ const Home = () => {
             </p>
             <p>Give a homeless pet a chance at happiness by adopting today.</p>
           </Col>
-          <Col>
+          <Col className="image-container">
        
             <Image
               src={homepage} alt="My Image"

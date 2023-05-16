@@ -78,7 +78,7 @@ const PetCard = ({ pet, rdmpet }) => {
           className="heart"
           onClick={FavHandler}
           style={{
-            color: favorite ? "#c6502f" : "black",
+            color: favorite ? "#FFFFFF" : "black",
             fontSize: favorite ? "2rem" : "1.5rem",
           }}
         />
