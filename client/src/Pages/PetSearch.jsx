@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import PetContext from "../context/petsContextProvider";
 import Filters from "../components/Filters";
 import PetList from "../components/PetList";
+import { motion } from "framer-motion";
 const PetSearch = () => {
   const { allpets, loading } = useContext(PetContext);
   const [filteredPets, setFilteredPets] = useState([]);
@@ -100,36 +101,50 @@ const PetSearch = () => {
   };
 
   return (
-    <div className="petsearchpage_cont">
-      <Filters
-        filteredAgeHandler={(e) => handleFilterChange("age", e.target.value)}
-        filteredGenderHandler={(e) =>
-          handleFilterChange("gender", e.target.value)
-        }
-        filteredColorHandler={(e) =>
-          handleFilterChange("color", e.target.value)
-        }
-        filteredSizeHandler={(e) => handleFilterChange("size", e.target.value)}
-        filteredVacccinatedHandler={(e) =>
-          handleFilterChange("vaccinated", e.target.value)
-        }
-        filteredSterilizedHandler={(e) =>
-          handleFilterChange("sterilized", e.target.value)
-        }
-        filteredtypeHandler={(e) => handleFilterChange("type", e.target.value)}
-        filteredGoodWithHandler={(e) =>
-          handleFilterChange("goodWith", e.target.value)
-        }
-        filteredDaysonSiteHandler={(e) =>
-          handleFilterChange("daysOnSite", e.target.value)
-        }
-        filteredCityHandler={(e) => handleFilterChange("city", e.target.value)
-        }
-        resetFiltersHandler={resetFilters}
-        filterCriteria={filterCriteria}
-      />
+    <div className="petsearchpage_cont1">
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        Meet your new pet!
+      </motion.h1>
+      <div className="petsearchpage_cont">
+        <Filters
+          filteredAgeHandler={(e) => handleFilterChange("age", e.target.value)}
+          filteredGenderHandler={(e) =>
+            handleFilterChange("gender", e.target.value)
+          }
+          filteredColorHandler={(e) =>
+            handleFilterChange("color", e.target.value)
+          }
+          filteredSizeHandler={(e) =>
+            handleFilterChange("size", e.target.value)
+          }
+          filteredVacccinatedHandler={(e) =>
+            handleFilterChange("vaccinated", e.target.value)
+          }
+          filteredSterilizedHandler={(e) =>
+            handleFilterChange("sterilized", e.target.value)
+          }
+          filteredtypeHandler={(e) =>
+            handleFilterChange("type", e.target.value)
+          }
+          filteredGoodWithHandler={(e) =>
+            handleFilterChange("goodWith", e.target.value)
+          }
+          filteredDaysonSiteHandler={(e) =>
+            handleFilterChange("daysOnSite", e.target.value)
+          }
+          filteredCityHandler={(e) =>
+            handleFilterChange("city", e.target.value)
+          }
+          resetFiltersHandler={resetFilters}
+          filterCriteria={filterCriteria}
+        />
 
-      <PetList filteredPets={filteredPets} loading={loading} />
+        <PetList filteredPets={filteredPets} loading={loading} />
+      </div>{" "}
     </div>
   );
 };
