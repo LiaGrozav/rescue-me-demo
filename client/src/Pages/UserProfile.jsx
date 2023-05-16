@@ -64,13 +64,13 @@ const UserProfile = () => {
           </div>
 
           <div className="added-pets">
-            <h4>Here is a list with your pets</h4>
+            <h3>Your pets</h3>
             {addedPets.length > 0 ? (
-              <div className="pet-card-container">
+              <ul>
                 {addedPets.map((pet) => (
-                  <PetCard key={pet._id} pet={pet} />
+                  <li key={pet._id}>{pet.name}</li>
                 ))}
-              </div>
+              </ul>
             ) : (
               <p>No pets found.</p>
             )}
