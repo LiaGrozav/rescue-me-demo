@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 const AdoptionProcess = () => {
   return (
@@ -34,9 +35,15 @@ const AdoptionProcess = () => {
       </div> */}
 
       <div className="cards_container">
-        <Card>
+        <motion.Card
+          initial={{ x: 2500 }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.3, duration: 0.7 }}
+        >
           <Card.Body className="ad_card">
-            <Card.Title>Adoption Rules</Card.Title>
+            <Card.Title style={{ marginBottom: "20px" }}>
+              Adoption Rules
+            </Card.Title>
             <Card.Text>
               The first step to the adoption process is to understand the rules.
               Please click the button below, and download the file with all the
@@ -44,28 +51,38 @@ const AdoptionProcess = () => {
             </Card.Text>
             <Button className="btn_cont">Download File</Button>
           </Card.Body>
-        </Card>
+        </motion.Card>
 
-        <Card>
+        <motion.Card
+          initial={{ x: 2500 }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
+        >
           <Card.Body className="ad_card">
-            <Card.Title>Adoption Form</Card.Title>
+            <Card.Title style={{ marginBottom: "20px" }}>
+              Adoption Form
+            </Card.Title>
             <Card.Text>
               After getting to know the rules, please fill in our adoption form
               by clicking the button below.
             </Card.Text>
             <Button className="btn_cont">Click Here</Button>
           </Card.Body>
-        </Card>
+        </motion.Card>
 
-        <Card>
-          <Card.Body className="ad_card_thatsit">
+        <motion.Card
+          initial={{ x: 2500 }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.6, duration: 0.7 }}
+        >
+          <Card.Body className="ad_card">
             <Card.Title> And that's it!</Card.Title>
             <Card.Text>
               All you need to do now is lay back and wait for our response! We
               will contact you as soon as possible.
             </Card.Text>
           </Card.Body>
-        </Card>
+        </motion.Card>
       </div>
     </div>
   );
