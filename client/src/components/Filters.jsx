@@ -180,7 +180,7 @@ const Filters = ({
 
       <button
         onClick={resetFiltersHandler}
-        className='btn btn-primary btn-reset'
+        className='btn_filters'
       >
         Reset Filters
       </button>

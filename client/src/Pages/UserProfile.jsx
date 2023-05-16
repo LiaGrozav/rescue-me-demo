@@ -40,8 +40,8 @@ const UserProfile = () => {
                 size="xs"
                 variant="light"
                 onClick={handleSettings}
-              >
-                <BiEdit />
+              > Settings
+                {/* <BiEdit /> */}
               </Button>
             </div>
             <h4>{user.user.city}</h4>
@@ -81,12 +81,12 @@ const UserProfile = () => {
       </div>
 
       <div className="give-for-adoption">
-        <h4>Give a pet for adoption</h4>
-        <a href="/giveforadoption">
-          <Button type="submit" className="btn_lgr">
-            Give for adoption
+        <h4>     Give for adoption</h4>
+      
+          <Button type="submit" className="btn_adoption" href={"/giveforadoption"}>
+          Click here   
           </Button>
-        </a>
+        
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+
 .cont-first {
   margin-top: 10vh;
   margin-bottom: 40vh;
@@ -9,14 +10,21 @@
 
 }
 
-.checkpets-btn {
-  display: inline-block;
-  margin-top: 15vh;
-  background-color: blue;
-}
+// .checkpets-btn {
+//   display: inline-block;
+//   margin-top: 15vh;
+//   background-color: blue;
+// }
 
 .cards-home {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: 3vh;
+ 
+
+}
+.div-btn-lgr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
