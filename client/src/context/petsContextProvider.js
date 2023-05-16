@@ -15,6 +15,7 @@ export const PetContextProvider = ({ children }) => {
   const [dogfacts, setDogfacts] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [profilePhoto, setProfilePhoto] = useState(null);
+  const [petProfilePhoto, setPetProfilePhoto] = useState(null);
 
   const handleLogin = () => {
     setIsLoggedIn(true);
@@ -148,6 +149,8 @@ export const PetContextProvider = ({ children }) => {
         setLoading,
         user,
         setUser,
+        petProfilePhoto,
+        setPetProfilePhoto,
         profilePhoto,
         setProfilePhoto,
         isLoggedIn,
