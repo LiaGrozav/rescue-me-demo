@@ -23,7 +23,7 @@ const ShelterSearch = () => {
 
   return (
     <div fluid className="cont-shelter">
-      <Card>
+      <div className="card-shelter">
         <Card.Body>
           <Row>
             <Col>
@@ -39,12 +39,16 @@ const ShelterSearch = () => {
             </Col>
           </Row>
           <Col className="m-4">
-            <Button className="btn_lgr" type="submit" onClick={handleShelterSearch}>
+            <Button
+              className="btn_lgr"
+              type="submit"
+              onClick={handleShelterSearch}
+            >
               Submit
             </Button>
           </Col>
         </Card.Body>
-      </Card>
+      </div>
 
       <div className="show-shelters">
         <h3>Shelters:</h3>

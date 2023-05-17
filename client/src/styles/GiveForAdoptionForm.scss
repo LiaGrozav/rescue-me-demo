@@ -1,20 +1,21 @@
+@use "./partials/variables" as variables;
+
 .container-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-
+  height: 100%;
+  margin-block: 10vh;
   .give-for-adoption-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 25px;
     grid-row-gap: 15px;
-    justify-items: center;
-    align-items: start;
+    justify-items: left;
+    align-items: center;
     width: 100%;
     border: 1px solid #ccc;
-    margin: 20px;
     border-radius: 5px;
     padding: 20px;
 
@@ -39,11 +40,8 @@
         font-size: 14px;
       }
 
-      // .custom-select {
-      //   .css-1pahdxg-control {
-      //     text-align: left;
-      //   }
-      // }
+      .custom-select {
+      }
     }
     .submit-button-form {
       display: flex;
@@ -56,13 +54,10 @@
       }
     }
   }
-
 }
-.give-for-adoption{
- margin:0 10vh;
+.give-for-adoption {
+  margin: 0 10vh;
   // margin-left: 1rem;
-  display:flex;
+  display: flex;
   flex-direction: column;
-
-
 }
