@@ -1,4 +1,9 @@
 .settings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+align-items: center;
   max-width: 27rem;
   margin: 9rem auto 6rem;
   border: 1px solid #ccc;
@@ -6,26 +11,32 @@
   border-radius: 5px;
 
   .form-groups {
-    // padding: 10px;
-    // margin: 10px;
+ display: flex;
+ flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   }
 
   .form-inputs {
-    // padding: 10px;
-    // margin: 10px;
+    width:90%;
+    padding: 10px;
+    margin: 5px;
   }
 
   .delete-profile-btn {
-    padding: 10px;
-    margin: 10px;
+    // padding: 10px;
+    margin: 5px;
   }
 
   .btn_sv {
     padding: 10px;
   }
+  
   .form-label{
-    margin:none;
+    margin-top:13px;
+    margin-bottom: 5px;
 color:#3A5171;
-font-size: 2rem;
+font-size: 1.5rem;
   }
 }
