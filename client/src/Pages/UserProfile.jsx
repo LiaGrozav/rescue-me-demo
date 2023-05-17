@@ -81,7 +81,7 @@ const UserProfile = () => {
       </div>
 
       <div className="give-for-adoption">
-        <h4>     Give for adoption</h4>
+        <h4>Give for adoption</h4>
       
           <Button type="submit" className="btn_adoption" href={"/giveforadoption"}>
           Click here   

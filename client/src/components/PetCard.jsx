@@ -2,9 +2,10 @@ import React from "react";
 
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaHeart } from "react-icons/fa";
+
 import { useState, useContext, useEffect } from "react";
 import PetContext from "../context/petsContextProvider";
+
 
 import axios from "axios";
 const PetCard = ({ pet, rdmpet }) => {
@@ -74,17 +75,20 @@ const PetCard = ({ pet, rdmpet }) => {
     <Card className="card_petcard">
       <Card.Img
         variant="top"
-        src={displayPet.photoURL ? displayPet.photoURL : "https://picsum.photos/id/200/300"}
+        src={
+          displayPet.photoURL
+            ? displayPet.photoURL
+            : "https://picsum.photos/id/200/300"
+        }
       />
       <Card.Body>
-        <FaHeart
-          className="heart"
+   
+        <i
+          className={` ${favorite ? "fa-solid fa-heart" : "fa-regular fa-heart"}`}
           onClick={FavHandler}
-          style={{
-            color: favorite ? "#FFFFFF" : "black",
-            fontSize: favorite ? "2rem" : "1.5rem",
-          }}
-        />
+         
+        ></i>
+     
         <Link className="linkpet" to="/petprofile" state={displayPet}>
           <Card.Title>{displayPet.name}</Card.Title>
           {/* <Card.Text></Card.Text> */}
