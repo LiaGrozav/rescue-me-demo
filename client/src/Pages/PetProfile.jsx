@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Carousel, Button } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 /* import { useContext } from "react";
 import PetContext from "../context/petsContextProvider"; */
@@ -18,19 +18,77 @@ const PetProfile = () => {
   const pet = state;
   console.log(pet);
   return (
-    <div className="petProfile_cont">
-      <Container className="petProfile">
-        <Row>
-          <Carousel className="carousel-pet">
+    <Container className="pet-profile-cont">
+      <div className="pet-profile-info">
+        <div className="pet-profile-photo">
+          <img
+            className="d-block w-100"
+            src={
+              pet.photoURL ? pet.photoURL : "https://picsum.photos/id/200/300"
+            }
+            alt="First slide"
+          />
+        </div>
+        <div className="pet-profile-data">
+          <h2>
+            <strong>
+              {pet.name.charAt(0).toUpperCase() +
+                pet.name.slice(1).toLowerCase()}
+            </strong>
+          </h2>
+          <h4>Shelter</h4>
+          <h4>Breed: {pet.breed}</h4>
+          <h4>Size: {pet.size}</h4>
+
+          <h4>
+            {pet.city.charAt(0).toUpperCase() + pet.city.slice(1).toLowerCase()}
+            , Germany
+          </h4>
+          <Button className="btn_lgr" href={"/adoptionprocess"}>
+            Adopt me
+          </Button>
+        </div>
+      </div>
+      <div className="pet-profile-description">
+        <h4>Description:</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+          laboriosam quisquam asperiores! Sed similique consequuntur ipsam
+          ducimus aut, deserunt quam sapiente illo beatae nobis, odio ut facere
+          animi at ipsum nisi pariatur. Ullam est quis repellendus! Facere
+          dolorem asperiores suscipit. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Possimus laboriosam quisquam asperiores! Sed
+          similique consequuntur ipsam ducimus aut, deserunt quam sapiente illo
+          beatae nobis, odio ut facere animi at ipsum nisi pariatur. Ullam est
+          quis repellendus! Facere dolorem asperiores suscipit. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Possimus laboriosam
+          quisquam asperiores! Sed similique consequuntur ipsam ducimus aut,
+          deserunt quam sapiente illo beatae nobis, odio ut facere animi at
+          ipsum nisi pariatur. Ullam est quis repellendus! Facere dolorem
+          asperiores suscipit. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Possimus laboriosam quisquam asperiores! Sed
+          similique consequuntur ipsam ducimus aut, deserunt quam sapiente illo
+          beatae nobis, odio ut facere animi at ipsum nisi pariatur. Ullam est
+          quis repellendus! Facere dolorem asperiores suscipit. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Possimus laboriosam
+          quisquam asperiores! Sed similique consequuntur ipsam ducimus aut,
+          deserunt quam sapiente illo beatae nobis, odio ut facere animi at
+          ipsum nisi pariatur. Ullam est quis repellendus! Facere dolorem
+          asperiores suscipit.
+        </p>
+      </div>
+    </Container>
+  );
+};
+
+export default PetProfile;
+
+/* <Carousel className="carousel-pet">
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={
-                  pet.photoURL
-                    ? pet.photoURL
-                    : "https://picsum.photos/id/200/300"
-                }
-                alt="First slide"
+                src="https://picsum.photos/id/200/300"
+                alt="Second slide"
               />
             </Carousel.Item>
             <Carousel.Item>
@@ -47,51 +105,4 @@ const PetProfile = () => {
                 alt="Third slide"
               />
             </Carousel.Item>
-          </Carousel>
-        </Row>
-      </Container>
-      <Container className="pet_text_info">
-        <div className="pet_titles_info">
-          <h2>{pet.name}</h2>
-          <h4>
-            {pet.breed} | {pet.size} | City | Country
-          </h4>
-          <h4>SHELTER</h4>
-
-          <Button className="btn_lgr" href={"/adoptionprocess"}>
-            Adopt me
-          </Button>
-        </div>
-        <div className="pet_description_info">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
-            laboriosam quisquam asperiores! Sed similique consequuntur ipsam
-            ducimus aut, deserunt quam sapiente illo beatae nobis, odio ut
-            facere animi at ipsum nisi pariatur. Ullam est quis repellendus!
-            Facere dolorem asperiores suscipit. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Possimus laboriosam quisquam
-            asperiores! Sed similique consequuntur ipsam ducimus aut, deserunt
-            quam sapiente illo beatae nobis, odio ut facere animi at ipsum nisi
-            pariatur. Ullam est quis repellendus! Facere dolorem asperiores
-            suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Possimus laboriosam quisquam asperiores! Sed similique consequuntur
-            ipsam ducimus aut, deserunt quam sapiente illo beatae nobis, odio ut
-            facere animi at ipsum nisi pariatur. Ullam est quis repellendus!
-            Facere dolorem asperiores suscipit. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Possimus laboriosam quisquam
-            asperiores! Sed similique consequuntur ipsam ducimus aut, deserunt
-            quam sapiente illo beatae nobis, odio ut facere animi at ipsum nisi
-            pariatur. Ullam est quis repellendus! Facere dolorem asperiores
-            suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Possimus laboriosam quisquam asperiores! Sed similique consequuntur
-            ipsam ducimus aut, deserunt quam sapiente illo beatae nobis, odio ut
-            facere animi at ipsum nisi pariatur. Ullam est quis repellendus!
-            Facere dolorem asperiores suscipit.
-          </p>
-        </div>
-      </Container>
-    </div>
-  );
-};
-
-export default PetProfile;
+          </Carousel> */
