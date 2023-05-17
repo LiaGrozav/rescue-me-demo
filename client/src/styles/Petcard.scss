@@ -12,6 +12,7 @@
     object-fit: cover !important;
   }
 
+
   .card-body {
     width: 100%;
     height: 20% !important;
@@ -20,17 +21,24 @@
     align-items: center;
     justify-content: center;
     padding: 0 !important;
-    .heart {
+    .fa-heart {
       position: absolute;
       right: 20px;
       top: 20px;
+      
     }
-    .heart:hover {
-      width: 2rem;
-      height: 2rem;
+   .fa-heart{
+      color: white;
+      font-size:  2rem;
+    }
+    .fa-heart:hover {
+      
+      font-size:  2.5rem;
+
       transition: 0.3s;
       cursor: pointer;
     }
+   
     .linkpet {
       display: flex;
       align-items: center;
@@ -64,6 +72,7 @@
     }
   }
 }
+
 
 // ______________MEDIA QUERIES_______________
 
