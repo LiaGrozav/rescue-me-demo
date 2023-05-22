@@ -36,6 +36,8 @@ const UserProfile = () => {
           <div className="user-details">
             <div className="go-to-settings">
               <h1>{user.user.name}</h1>
+            <h4 className="checkboxes-userprofile"> User: {user.user.shelter ? <h4>Shelter</h4> : null} </h4>
+            <h4 className="city-name capitalize checkboxes-userprofile"> City: <h4>{user.user.city}</h4></h4>
 
               <Button
                 className="settings-button"
@@ -46,16 +48,12 @@ const UserProfile = () => {
                 {/* <BiEdit /> */}
               </Button>
             </div>
-            <h4 className="city-name capitalize">{user.user.city}</h4>
-            <div className="checkboxes-userprofile">
-              {user.user.shelter ? <p>Shelter</p> : null}
-            </div>
           </div>
         </div>
 
         <div className="pet-groups-container">
           <div className="favorite-pets">
-            <h4>Here is a list with your favorite pets</h4>
+            <h4>Your favorite pets list</h4>
             {favorites.length > 0 ? (
               <div className="pet-card-container">
                 {favorites.map((pet) => (
@@ -68,7 +66,7 @@ const UserProfile = () => {
           </div>
 
           <div className="added-pets">
-            <h4>Here is a list with your pets</h4>
+            <h4>Pets added for adoption</h4>
             {addedPets.length > 0 ? (
               <div className="pet-card-container">
                 {addedPets.map((pet) => (
