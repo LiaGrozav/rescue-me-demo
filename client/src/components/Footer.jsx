@@ -13,40 +13,38 @@ const Footer = () => {
         <Col xs={12} md={6} className="text-center">
           <Nav className="justify-content-center justify-content-md-start pt-1">
             <Nav.Item>
-              <Nav.Link as={Link} to={"/contact"} id="nav-link">
+              <Nav.Link as={Link} to={"/contact"} className="nav-link">
                 Contact us
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#" id="nav-link">
+              <Nav.Link href="#" className="nav-link">
                 Imprint
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#" id="nav-link">
+              <Nav.Link href="#" className="nav-link">
                 TOC's
               </Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>
         <Col xs={12} md={6} className="text-center">
-
           <Nav className="justify-content-center justify-content-md-end pb-1">
             <Nav.Item>
-              <Nav.Link href="#" id="nav-link">
+              <Nav.Link href="#" className="nav-link">
                 <BsInstagram size={20} />
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#" id="nav-link">
+              <Nav.Link href="#" iclassName="nav-link">
                 <BsFacebook size={20} />
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#" id="nav-link">
+              <Nav.Link href="#" className="nav-link">
                 <BsFillShareFill size={20} />
               </Nav.Link>
-
             </Nav.Item>
           </Nav>
         </Col>

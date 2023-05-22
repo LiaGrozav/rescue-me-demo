@@ -15,26 +15,24 @@
   margin: 6rem 10rem 10rem;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 
   .filters-list {
     border: 1px solid rgb(199, 195, 195);
+    min-height: 75vh;
     border-radius: 5px;
-    padding: 10px;
+    padding: 1.5rem;
     width: 30%;
     margin: 0 2rem;
     color: #3A5171;
     display: flex;
     flex-direction: column;
-  
+ 
+  align-items: center;
 
-    .btn-filters {
-      margin: 10px auto 10px;
-      justify-content: center;
-      width: 40%;
-     
-    }
+   
   }
+
 
   .cards {
     display: flex;
@@ -51,17 +49,24 @@
 @media (max-width: 600px) {
   body {
     .petsearchpage_cont {
-       margin: 4rem 2rem;
+       margin: 4rem 4rem;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      
       .filters-list {
-        margin: 0 2rem;
+        margin: 0 0rem;
         margin-bottom: 2rem;
         width: auto;
+      }
+      .cards{
+        margin: 4rem 6rem;
       }
     }
   }
 }
+
+
 
 // /* Extra small devices (phones, 600px and down) */
 // // @media all and (max-width: 600px) {...}
