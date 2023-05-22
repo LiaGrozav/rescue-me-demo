@@ -1,7 +1,11 @@
+@use "./partials/variables";
+
 .settings-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: -5px 7px 20px 2px variables.$mypink;
+
 
 align-items: center;
   max-width: 27rem;
@@ -29,9 +33,7 @@ align-items: center;
     margin: 5px;
   }
 
-  .btn_sv {
-    padding: 10px;
-  }
+
   
   .form-label{
     margin-top:13px;

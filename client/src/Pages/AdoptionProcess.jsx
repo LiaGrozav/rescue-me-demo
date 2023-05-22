@@ -1,38 +1,21 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import adoption from "../images/adoption.jpg";
+import adoption from "../images/adoption_process.jpg";
 
 const AdoptionProcess = () => {
   return (
     <div className='adop_proc_cont'>
-      <div
-        className='hero p-5 text-center bg-image'
-        style={{
-          backgroundImage: `url(${adoption})`,
-          height: 400,
-        }}
-      >
-        <div className='mask' style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
-          <div className='d-flex justify-content-center align-items-center h-100'>
-            <div className='text-white'>
-              <h1 className='mb-3'>Adoption Rules and Process</h1>
-              {/* <h4 className="mb-3">Subheading</h4> */}
-            </div>
-          </div>
-        </div>
+      <div className='hero bg-image'>
+       
+        <img className="image"
+        src={adoption} alt=""/>
+      
+ 
+      
+ 
       </div>
-      {/* <div className="background-container">
-        <div className="title_banner">
-          <h1>Adopting Process</h1>
-          <h2>Step by Step Application</h2>
-        </div>
-        <img
-          className="image"
-          src="https://images.pexels.com/photos/5709566/pexels-photo-5709566.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt=""
-        />
-      </div> */}
+     
 
       <div className='cards_container'>
         <motion.Card
@@ -46,8 +29,7 @@ const AdoptionProcess = () => {
             </Card.Title>
             <Card.Text>
               The first step to the adoption process is to understand the rules.
-              Please click the button below, and download the file with all the
-              information you need.
+              
             </Card.Text>
             <Button className='btn_lgr '>Download File</Button>
           </Card.Body>
