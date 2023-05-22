@@ -92,6 +92,8 @@ const Filters = ({
           <option value='white'>White</option>
           <option value='brown'>Brown</option>
           <option value='golden'>Golden</option>
+          <option value='gray'>Gray</option>
+
 
         </select>
       </div>

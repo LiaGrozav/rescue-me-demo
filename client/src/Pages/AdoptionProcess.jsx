@@ -1,22 +1,22 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
+import adoption from "../images/adoption.jpg";
 
 const AdoptionProcess = () => {
   return (
-    <div className="adop_proc_cont">
+    <div className='adop_proc_cont'>
       <div
-        className="hero p-5 text-center bg-image"
+        className='hero p-5 text-center bg-image'
         style={{
-          backgroundImage:
-            "url('https://images.pexels.com/photos/5709566/pexels-photo-5709566.jpeg?auto=compress&cs=tinysrgb&w=600')",
+          backgroundImage: `url(${adoption})`,
           height: 400,
         }}
       >
-        <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
-          <div className="d-flex justify-content-center align-items-center h-100">
-            <div className="text-white">
-              <h1 className="mb-3">Adoption Rules and Process</h1>
+        <div className='mask' style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
+          <div className='d-flex justify-content-center align-items-center h-100'>
+            <div className='text-white'>
+              <h1 className='mb-3'>Adoption Rules and Process</h1>
               {/* <h4 className="mb-3">Subheading</h4> */}
             </div>
           </div>
@@ -34,13 +34,13 @@ const AdoptionProcess = () => {
         />
       </div> */}
 
-      <div className="cards_container">
+      <div className='cards_container'>
         <motion.Card
           initial={{ x: 2500 }}
           animate={{ x: 0 }}
           transition={{ delay: 0.3, duration: 0.7 }}
         >
-          <Card.Body className="ad_card">
+          <Card.Body className='ad_card first-card'>
             <Card.Title style={{ marginBottom: "20px" }}>
               Adoption Rules
             </Card.Title>
@@ -49,7 +49,7 @@ const AdoptionProcess = () => {
               Please click the button below, and download the file with all the
               information you need.
             </Card.Text>
-            <Button className="btn_cont ">Download File</Button>
+            <Button className='btn_lgr '>Download File</Button>
           </Card.Body>
         </motion.Card>
 
@@ -58,7 +58,7 @@ const AdoptionProcess = () => {
           animate={{ x: 0 }}
           transition={{ delay: 0.5, duration: 0.7 }}
         >
-          <Card.Body className="ad_card">
+          <Card.Body className='ad_card second-card'  >
             <Card.Title style={{ marginBottom: "20px" }}>
               Adoption Form
             </Card.Title>
@@ -66,7 +66,7 @@ const AdoptionProcess = () => {
               After getting to know the rules, please fill in our adoption form
               by clicking the button below.
             </Card.Text>
-            <Button className="btn_cont">Click Here</Button>
+            <Button className='btn_lgr'>Click Here</Button>
           </Card.Body>
         </motion.Card>
 
@@ -75,8 +75,8 @@ const AdoptionProcess = () => {
           animate={{ x: 0 }}
           transition={{ delay: 0.6, duration: 0.7 }}
         >
-          <Card.Body className="ad_card">
-            <Card.Title> And that's it!</Card.Title>
+          <Card.Body className='ad_card third-card'>
+            <Card.Title  style={{ marginBottom: "20px" }}> And that's it!</Card.Title>
             <Card.Text>
               All you need to do now is lay back and wait for our response! We
               will contact you as soon as possible.
