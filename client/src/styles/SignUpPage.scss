@@ -1,0 +1,56 @@
+@use "./partials/variables" as variables;
+
+.container_signup {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  border: 1px solid #ccc;
+  box-shadow: -5px 7px 20px 2px variables.$mypink;
+  border-radius: 5px;
+  padding: 20px;
+
+  input[type="text"],
+  input[type="number"] {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+  input[type="checkbox"] {
+    color: variables.$text-color-black;
+  }
+  .signup-form {
+    .text-start {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      label {
+        font-weight: bold;
+        text-align: left;
+        color: variables.$text-color-black;
+      }
+      input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+    }
+    .checkboxes-signup {
+      color: variables.$text-color-black;
+    }
+  }
+  .signup-with {
+    text-align: center;
+    background: #fff;
+    padding: 0 15px;
+    color: variables.$text-color-black;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .icon-buttons {
+    margin-top: 15px;
+  }
+}
