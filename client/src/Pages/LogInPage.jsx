@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import "../styles/LogInPage.scss"
 import PetContext from "../context/petsContextProvider";
 // import { useNavigate } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
@@ -57,7 +58,6 @@ function LoginPage() {
 
   return (
     <div className="form_container container_login">
-      <img className="logo" src={""} alt="logo" />
       <Form className="form login-form" onSubmit={handleSubmitLogin}>
         <Form.Group controlId="formEmail" className="text-start">
           <Form.Label>Email address</Form.Label>
@@ -87,14 +87,14 @@ function LoginPage() {
 
         {errorMessage && <div className="text-danger">{errorMessage}</div>}
 
-        <Form.Label>Log in with</Form.Label>
+        <h6 className="login-with"> Or log in with</h6>
 
         <div className="icon-buttons">
-          <Button variant="light" className="mr-2">
+          <Button variant="light" className="btn_sml">
             <FaFacebook className="mr-2" />
           </Button>
-          <Button variant="light">
-            <FaGoogle className="mr-2" />
+          <Button variant="light" className="btn_sml">
+            <FaGoogle className="mr-2 " />
           </Button>
         </div>
       </Form>
