@@ -40,6 +40,7 @@
       flex-direction: column;
       margin:1rem 3rem 3rem 1rem;
 
+    
       // justify-content: flex-start;
       .card-shelter {
         max-width: 40rem;
@@ -56,6 +57,18 @@
         margin-bottom: 10rem;
       }
     }
+      .maincontainer{
+        display: flex;
+      flex-direction: column;
+      border: 2px solid red;
+      }
+      .shelterpic{
+        img{
+          size: 300px;
+           border: 2px solid red;
+        }
+      }
+
   }
   
 }
