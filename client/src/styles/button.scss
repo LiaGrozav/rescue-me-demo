@@ -41,7 +41,30 @@
   background-color: variables.$mylightbrown;
   border-color: transparent;
 }
+.btn_sml {
+  display: inline-block;
 
+  width: 6rem;
+  height: 2.5rem;
+  color: #fff;
+  border-color: transparent;
+  
+
+  background-color: variables.$mypink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:active {
+    outline: none !important;
+    border: none !important;
+    background-color: #d1b4a9 !important;
+  }
+}
+
+.btn_sml:hover {
+  background-color: variables.$mylightbrown;
+  border-color: transparent;
+}
 // ------Save button (UserProfileSettings) ------
 
 .btn_sv {

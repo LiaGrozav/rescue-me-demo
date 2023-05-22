@@ -1,4 +1,5 @@
 .container-contact {
+  background-color:rgba(241,203,192,0.5) ;
   margin-top: 15vh;
   margin-bottom: 10vh;
   border: 1px solid #ccc;
@@ -16,5 +17,9 @@
       margin-top: 3rem;
       margin-bottom: 1.5rem;
     }
+  }
+  .form-label{
+color: #3A5171
+
   }
 }

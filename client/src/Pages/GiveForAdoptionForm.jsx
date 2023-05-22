@@ -249,8 +249,8 @@ const GiveForAdoptionForm = () => {
           <Button
             className="btn_adoption"
             disabled={loading}
-            variant="light"
             type="submit"
+            className="btn_sml"
           >
             Submit
           </Button>
