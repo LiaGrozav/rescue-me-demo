@@ -1,23 +1,19 @@
 import React from "react";
-
 import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import PetContext from "../context/petsContextProvider";
-
-
 import axios from "axios";
+
 const PetCard = ({ pet, rdmpet }) => {
-  // console.log("rdmpet:", rdmpet);
-  // conditional check to render the appropriate information in the PetCard component based on whether it's receiving pet or rdmpet prop
   const displayPet = rdmpet || pet;
   const [favorite, setFavorite] = useState(false);
   const { user, setUser } = useContext(PetContext);
+  const navigate = useNavigate();
 
-  console.log("pet ->", displayPet._id);
-  const FavHandler = async () => {
+  const FavHandler = async (e) => {
     if (!favorite) {
+       e.stopPropagation();
       try {
         const response = await axios.post(
           `http://localhost:4000/api/users/favorites`,
@@ -25,7 +21,6 @@ const PetCard = ({ pet, rdmpet }) => {
             petId: displayPet._id,
           }
         );
-        console.log(response);
         setUser(response.data);
         setFavorite(true);
       } catch (error) {
@@ -41,7 +36,6 @@ const PetCard = ({ pet, rdmpet }) => {
             },
           }
         );
-        console.log(res);
         setUser(res.data);
         setFavorite(false);
       } catch (error) {
@@ -56,13 +50,10 @@ const PetCard = ({ pet, rdmpet }) => {
         const response = await axios.get(
           `http://localhost:4000/api/users/getMe`
         );
-        console.log(response);
         const favorites = response.data.data.user.favorites.map(
           (pet) => pet._id
         );
-
         setFavorite(favorites.includes(displayPet._id));
-        console.log(favorite);
       } catch (error) {
         console.error(error);
       }
@@ -70,30 +61,37 @@ const PetCard = ({ pet, rdmpet }) => {
     checkIfFavorite();
   }, [displayPet._id]);
 
-  console.log(user);
+  const handleCardClick = () => {
+    navigate("/petprofile", { state: displayPet });
+  };
+
   return (
     <Card className="card_petcard">
-      <Card.Img
-        variant="top"
-        src={
-          displayPet.photoURL
-            ? displayPet.photoURL
-            : "https://picsum.photos/id/200/300"
-        }
-      />
-      <Card.Body>
-   
-        <i
-          className={` ${favorite ? "fa-solid fa-heart" : "fa-regular fa-heart"}`}
-          onClick={FavHandler}
-         
-        ></i>
-     
-        <Link className="linkpet" to="/petprofile" state={displayPet}>
+      <div className="linkpet" onClick={handleCardClick}>
+        <Card.Img
+          variant="top"
+          src={
+            displayPet.photoURL
+              ? displayPet.photoURL
+              : "https://picsum.photos/id/200/300"
+          }
+        />
+
+        <Card.Body>
+          <span>
+            <i
+              className={`${
+                favorite ? "fa-solid fa-heart" : "fa-regular fa-heart"
+              }`}
+              onClick={(e) => {
+                e.stopPropagation(); // Stop event propagation to prevent navigation
+                FavHandler(e);
+              }}
+            ></i>
+          </span>
           <Card.Title>{displayPet.name}</Card.Title>
-          {/* <Card.Text></Card.Text> */}
-        </Link>
-      </Card.Body>
+        </Card.Body>
+      </div>
     </Card>
   );
 };

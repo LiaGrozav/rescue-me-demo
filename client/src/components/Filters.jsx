@@ -94,9 +94,7 @@ const Filters = ({
           <option value='golden'>Golden</option>
 
         </select>
-      </div>
-
-      <div>
+     
 
         <label>Good with</label>
         <select  value={filterCriteria.goodWith}

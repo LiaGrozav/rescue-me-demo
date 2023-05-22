@@ -13,7 +13,7 @@ const AdoptionProcess = () => {
           height: 400,
         }}
       >
-        <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
+        <div className="mask" >
           <div className="d-flex justify-content-center align-items-center h-100">
             <div className="text-white">
               <h1 className="mb-3">Adoption Rules and Process</h1>

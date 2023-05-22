@@ -14,8 +14,8 @@
 }
 
 .footer {
-  background-color: variables.$mypink;
+  background-color: rgba($color: white, $alpha: 0.85);
 }
-#nav-link {
-  color: variables.$text-color-white;
+.nav-link {
+  color: #3A5171 !important;
 }
