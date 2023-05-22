@@ -46,7 +46,7 @@ const UserProfile = () => {
                 {/* <BiEdit /> */}
               </Button>
             </div>
-            <h4>{user.user.city}</h4>
+            <h4 className="city-name capitalize">{user.user.city}</h4>
             <div className="checkboxes-userprofile">
               {user.user.shelter ? <p>Shelter</p> : null}
             </div>
