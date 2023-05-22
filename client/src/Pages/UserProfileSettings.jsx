@@ -121,11 +121,11 @@ const UserProfileSettings = () => {
 
       <Form.Group controlId="formName" className="form-groups">
         <Form.Label>Edit photo</Form.Label>
-        <div>
-          <Button className="btn_lgr" onClick={handleSelectPhoto}>
-            Chose a file from your computer
+   
+          <Button className="settings-button" onClick={handleSelectPhoto}>
+            Choose file 
           </Button>
-        </div>
+        
         {uploading && <p>Uploading photo...</p>}
         {error && <p className="text-danger">{error}</p>}
         <Form.Control
@@ -147,7 +147,7 @@ const UserProfileSettings = () => {
           onChange={handleNameChange}
         />
         <Button className="settings-button" onClick={handleSaveName}>
-          Save new name
+          Save 
         </Button>
       </Form.Group>
 
@@ -161,7 +161,7 @@ const UserProfileSettings = () => {
           onChange={handleEmailChange}
         />
         <Button className="settings-button" onClick={handleSaveEmail}>
-          Save new email
+          Save 
         </Button>
       </Form.Group>
 
