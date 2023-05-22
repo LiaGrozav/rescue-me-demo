@@ -1,16 +1,34 @@
 @use "./variables";
 
 .nav_nav {
-  min-height: 5rem;
-}
-
-#header {
-  max-width: 9999px;
+  min-height: 4rem;
 }
 
 #nav {
-  background-color: variables.$mypink;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+#nav-link {
+  color: #3a5171;
 }
 .nav-link {
-  color: variables.$text-color-white;
+  color: #3a5171 !important;
 }
+
+#nav-link:hover {
+  color: #3a5171;
+  border: 2px solid #3a5171;
+  border-radius: 30px 0 30px 0px;
+  background-color: #d1b4a98a;
+}
+
+#nav{
+  #header{
+ .navbar-toggler-icon{
+    
+  background-color: #3a5171  !important;
+  border-radius: 7px;
+ 
+}
+  }
+}
+ 

@@ -5,48 +5,65 @@
   height: 17rem !important;
   margin: 0 20px 20px 20px;
   // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  box-shadow: 0px 1px 12px -8px #212529;
-  .card-img-top {
-    width: 100% !important;
-    height: 80% !important;
-    object-fit: cover !important;
-  }
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  overflow: hidden;
+  .linkpet {
 
-
-  .card-body {
-    width: 100%;
-    height: 20% !important;
-    text-align: center;
-    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 !important;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    //padding: 1rem !important;
+    background-color: #d1b4a979;
+
+    .card-img-top {
+      width: 100% !important;
+      height: 80% !important;
+      object-fit: cover !important;
+    }
+
+    h5 {
+      color: #3a5171;
+      font-weight: 600;
+    }
+    border-color: transparent;
+    // text-align: center;
+    border-radius: 3px;
+    .card-title {
+      margin: 0;
+    }
     .fa-heart {
       position: absolute;
       right: 20px;
       top: 20px;
-      
     }
-   .fa-heart{
+    .fa-heart {
       color: white;
-      font-size:  2rem;
+      font-size: 2rem;
     }
-    .fa-heart:hover {
-      
-      font-size:  2.5rem;
+  }
+  .linkpet:hover {
+    background-color: #ffffff;
+    h5 {
+      color: #c89b89;
+    }
 
-      transition: 0.3s;
-      cursor: pointer;
-    }
-   
-    .linkpet {
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    .card-body {
+      width: 100%;
+      height: 20% !important;
+      text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0 !important;
       text-decoration: none;
       width: 100%;
       height: 100%;
-      padding: 1rem !important;
       background-color: #d1b4a9;
       h5 {
         color: #fff;
@@ -58,18 +75,25 @@
         margin: 0;
       }
     }
-    .linkpet:hover {
-      background-color: #ffffff;
-      h5 {
-        color: #c89b89;
-      }
 
-      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out;
+    .fa-heart:hover {
+      font-size: 2.5rem;
+      transition: 0.3s;
+      cursor: pointer;
     }
+   
   }
 }
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 
+  cursor: pointer;
+}
+
+.card:not(:hover) {
+  transition: 0.5s;
+}
 
 // ______________MEDIA QUERIES_______________
 

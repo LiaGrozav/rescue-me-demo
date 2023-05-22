@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import PetContext from "../context/petsContextProvider";
 import "../styles/GiveForAdoptionForm.scss";
@@ -244,11 +244,11 @@ const GiveForAdoptionForm = () => {
             onChange={(event) => setSterilized(event.value)}
           />
         </Form.Group>
-        
-        <div>
+
+        <div className="submit-button-form">
           <Button
+            className="btn_adoption"
             disabled={loading}
-            
             type="submit"
             className="btn_sml"
           >
