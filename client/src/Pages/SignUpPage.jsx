@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import "../styles/SignUpPage.scss"
 import { Row, Col, Form, Button } from "react-bootstrap";
 import Checkbox from "../components/Checkbox";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
@@ -53,7 +54,7 @@ const SignUpPage = () => {
 
   return (
     <div className="form_container container_signup">
-      <Row>
+      <Row className="signup-form">
         <Col>
           <Form onSubmit={handleSubmitSignUp} className="form">
             <Form.Group controlId="formName" className="text-start">
@@ -89,7 +90,7 @@ const SignUpPage = () => {
               />
             </Form.Group>
 
-            <Form.Group controlId="formPassword">
+            <Form.Group controlId="formPassword" className="text-start">
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
@@ -105,7 +106,7 @@ const SignUpPage = () => {
               <Form.Control
                 type="password"
                 className="form-control"
-                placeholder="Reenter the password"
+                placeholder="Reenter your password"
                 value={passwordConfirm}
                 onChange={(event) => setPasswordConfirm(event.target.value)}
               />
@@ -125,14 +126,14 @@ const SignUpPage = () => {
         </Col>
       </Row>
 
-      <Form.Label>Sign up with</Form.Label>
+      <Form.Label className="signup-with"> <h6 > Or sign up with</h6></Form.Label>
 
       <div className="icon-buttons">
-        <Button variant="light" className="mr-2">
+        <Button variant="light" className="mr-2 btn_sml">
           <FaFacebook className="mr-2" />
         </Button>
-        <Button variant="light">
-          <FaGoogle className="mr-2" />
+        <Button variant="light" className="mr-2 btn_sml">
+          <FaGoogle />
         </Button>
       </div>
     </div>
