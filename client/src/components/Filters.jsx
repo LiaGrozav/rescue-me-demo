@@ -26,7 +26,7 @@ const Filters = ({
 
           {/* <option value='all'>All</option> */}
         
-          <option value="all">All</option>
+        
           <option value="cat">Cat</option>
           <option value="dog">Dog</option>
  

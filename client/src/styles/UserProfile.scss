@@ -29,6 +29,10 @@
         .go-to-settings {
           display: flex;
           flex-direction: column;
+          justify-content: flex-start;
+          .settings-button{
+            margin-top: 1rem;
+          }
         }
 
         .capitalize {
@@ -43,8 +47,11 @@
           display: flex;
           flex-direction: row;
           align-items: center;
-          justify-content: space-evenly;
-          padding: 10px;
+          justify-content: flex-start;
+h4{
+  padding-left: 2rem;
+  margin:0;
+}
         }
       }
     }
